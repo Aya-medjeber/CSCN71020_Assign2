@@ -70,17 +70,22 @@ int getIntInput(char message[]) {
 	return input;
 }
 
-void setLength(int input, int *length) {
-	if (input >= 0 && input < 100) {
+void setLength(int input, int* length) {
+	if (input >= 1 && input <= 99) {
 		*length = input;
 	}
 }
 
-void setWidth(int input, int *width) {
-	if (input > 0 && input <= 100) {
+void setWidth(int input, int* width) 
+{
+	if (input > 0 && input < 100)
+	{ // Accepts only from 1 to 99
 		*width = input;
 	}
 }
+
+	
+
 
 int getPerimeter(int* length, int* width) {
 	int perimeter = 2 * (*length + *width);
@@ -101,7 +106,7 @@ void printWelcomeMenu() {
 }
 
 void printOptions() {
-	printf("1. Get Rectange Length & Width\n");
+	printf("1. Get Rectangle Length & Width\n");
 	printf("2. Change Rectangle Length\n");
 	printf("3. Change Rectangle Width\n");
 	printf("4. Get Rectangle Perimeter\n");
