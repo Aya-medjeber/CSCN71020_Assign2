@@ -82,15 +82,16 @@ void setWidth(int input, int *width) {
 	}
 }
 
-int getPerimeter(int *length, int *width) {
-	int perimeter = *length + *length + *width;
+int getPerimeter(int* length, int* width) {
+	int perimeter = 2 * (*length + *width);
 	return perimeter;
 }
 
-int getArea(int *length, int *width) {
+int getArea(int* length, int* width) {
 	int area = *length * *width;
 	return area;
 }
+
 
 void printWelcomeMenu() {
 	printf(" **********************\n");
